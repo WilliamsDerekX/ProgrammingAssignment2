@@ -15,7 +15,8 @@
 ## makeCacheMatrix takes a square matrix assumed to be invertible
 ## then with a series of functions sets the input in cache and clears
 ## the cached_inv if called, gets the input, stores the inverse in cache
-## and gets the inverse stored
+## and gets the inverse stored. The function returns a list that will
+## be input into cacheSolve
 
 makeCacheMatrix <- function(input = matrix()) {
         cached_invX <- NULL
@@ -31,7 +32,8 @@ makeCacheMatrix <- function(input = matrix()) {
 
 
 ## Write a short comment describing this function
-## cacheSolve checks to see if an inverse is stored in cache
+## cacheSolve takes a list input made from makeCacheMatrix
+## checks to see if an inverse is stored in cache
 ## calling a function from makeCacheMatrix, then either retrieves
 ## the cached inverse or calculates an inverse of the entered matrix
 ## if not present,  The inverse is calculated using R's solve function
